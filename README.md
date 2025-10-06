@@ -9,7 +9,7 @@
 ## How to Execute
 1. Copy the repository
    ```sh
-   git clone https://github.com/aryareal1/csharp-journey
+   git clone https://github.com/aryareal1/CSharpJourney
    ```
 2. Run the command
    ```sh
