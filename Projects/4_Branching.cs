@@ -352,7 +352,9 @@ public class Branching
     Console.Write("Enter an hour (0-23): ");
     int hour = int.Parse(Console.ReadLine() ?? "0");
 
-    if (hour >= 19 && hour < 24 || hour <= 5)
+    if (hour >= 24 || hour < 0)
+      Console.WriteLine("Invalid hour!");
+    else if (hour >= 19 || hour <= 5)
       Console.WriteLine("Good night (malam)!");
     else if (hour >= 16)
       Console.WriteLine("Good afternoon (sore)!");
