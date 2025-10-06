@@ -1,0 +1,49 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio settings
+.vs/
+*.vcxproj.user
+*.code-workspace
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Cache
+*.cache
+*.tmp
+*.bak
+
+# Generated files
+*.exe
+*.dll
+*.pdb
+*.mdb
+
+# Others
+TestResults/
+*.dbmdl
+*.db
+*.sqlite
+*.swp
+*.DS_Store
+Thumbs.db
