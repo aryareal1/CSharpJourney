@@ -1,39 +1,57 @@
 ﻿using System.Reflection;
 using Sharprompt;
 
-internal class Program
+class Program
 {
   static void Main()
   {
-    // Get all public static methods from classes in assembly
-    var praktikMethods = Assembly.GetExecutingAssembly()
+    // Get all public static methods that starts with '_'
+    var allMethods = Assembly.GetExecutingAssembly()
       .GetTypes()
+      .Where(t => t.IsClass && t.IsPublic)
       .SelectMany(t => t.GetMethods(BindingFlags.Public | BindingFlags.Static)
-        .Where(m => m.Name.StartsWith("Practice") | m.Name.StartsWith("Assigment") | m.Name.StartsWith("Example") | m.Name.StartsWith("_")))
+        .Where(m => m.Name.StartsWith('_')))
       .ToList();
 
-    // Make list of options like "HelloWorld.Praktik1"
-    var options = praktikMethods
+    // Get all unique namespaces
+    var namespaces = allMethods
+      .Select(m => m.DeclaringType?.Namespace)
+      .Distinct()
+      .Where(ns => ns != null)
+      .Reverse()
+      .Cast<string>()
+      .ToList();
+
+    // First prompt selecting namespace
+    var selectedNamespace = Prompt.Select("Choose a namespace", namespaces);
+
+    // Filter method of selected namespace
+    var methodsInNamespace = allMethods
+      .Where(m => m.DeclaringType?.Namespace == selectedNamespace)
+      .ToList();
+
+    // Format to Class.Method
+    var options = methodsInNamespace
       .Select(m => $"{m.DeclaringType?.Name}.{m.Name}")
       .ToList();
 
-    // Show prompt
-    var project = Prompt.Select("Choose which project to run", options);
+    // Second pormpt selecting Class.Method
+    var selectedMethod = Prompt.Select($"Choose a project from {selectedNamespace}", options);
 
     Console.WriteLine();
 
-    // Separate class name and method
-    var parts = project.Split('.');
+    // Separate class and method;
+    var parts = selectedMethod.Split('.');
     var className = parts[0];
     var methodName = parts[1];
 
     // Find the method
-    var method = praktikMethods
+    var method = methodsInNamespace
       .FirstOrDefault(m =>
         m.DeclaringType?.Name == className &&
         m.Name == methodName);
 
-    // Run the method
+    // Execute
     method?.Invoke(null, null);
   }
 }

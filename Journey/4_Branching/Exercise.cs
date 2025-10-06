@@ -1,60 +1,14 @@
-public class Exercises
+namespace Branching;
+
+public class Exercise
 {
-  // Latihan 3.1 - Buatlah program untuk mengubah / konversi suhu dari Celcius ke fahrenheit dan reamur.
-  public static void _3_1()
-  {
-    Console.WriteLine("╰┈➤  Latihan 1 - Konversi Suhu");
-    Console.Write("Masukkan suhu dalam Celcius: ");
-    double cel = double.Parse(Console.ReadLine() ?? "0");
-
-    double fah = (cel * 9 / 5) + 32;
-    double rem = cel * 4 / 5;
-    double kel = cel + 273.15;
-
-    Console.WriteLine(
-      $"""
-
-      ⁕ Hasil Konversi
-      Celcius    : {cel} °C
-      Fahrenheit : {fah} °F
-      Reamur     : {rem} °Re
-      Kelvin     : {kel} K
-      """
-    );
-  }
-
-  // Latihan 3.2 - Buatlah program untuk mengkonversi nilai tukar Rupiah ke mata uang lain
-  public static void _3_2()
-  {
-    Console.WriteLine("╰┈➤  Latihan 2 - Konversi Mata Uang");
-
-    Console.Write("Masukkan jumlah uang dalam rupiah (IDR): ");
-    double idr = double.Parse(Console.ReadLine() ?? "0");
-
-    double usd = idr / 16_635;
-    double gbp = idr / 22_345.81;
-    double jpy = idr / 111.93;
-    double sar = idr / 4_435.44;
-
-    Console.WriteLine(
-      $"""
-      ⁕ Hasil Konversi
-      Rupiah (IDR) : Rp{idr:0.00}
-      Dollar (USD) : ${usd:0.00}
-      Pound (GBP)  : £{gbp:0.00}
-      Yen (JPY)    : ¥{jpy:0.00}
-      Riyal (SAR)  : ر.س {sar:0.00}
-      """
-    );
-  }
-
   // Latihan 4.1 - Buatlah program untuk mencari luas menggunakan percabangan switch case untuk menghitung:
   //   • Luas Persegi Panjang
   //   • Luas Segitiga
   //   • Luas Lingkaran
   //   • Keliling Persegi Panjang
   //   • Keliling Lingkaran
-  public static void _4_1()
+  public static void _1()
   {
     Console.WriteLine(
       """
@@ -144,7 +98,7 @@ public class Exercises
 
   // Latihan 4.2 - Buatlah program C# untuk menghitung Indeks Massa Tubuh (IMT/BMI) menggunakan percabangan
   //   (if–else) agar bisa menentukan kategori berat badan seperti kurus, normal, gemuk, atau obesitas.
-  public static void _4_2()
+  public static void _2()
   {
     Console.WriteLine(" ─── ⋆⋅ PROGRAM MENGHITUNG INDEKS MASA TUBUH (IMT) ⋅⋆ ── \n");
 
@@ -171,7 +125,7 @@ public class Exercises
   }
 
   // Latihan 4.3 - Buatlah program untuk menentukan nilai siswa dengan ketentuan
-  public static void _4_3()
+  public static void _3()
   {
     Console.WriteLine(" ─── ⋆⋅ PROGRAM MENGHITUNG NILAI SISWA ⋅⋆ ── \n");
 

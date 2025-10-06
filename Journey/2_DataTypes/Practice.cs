@@ -1,7 +1,9 @@
-public class DataTypes
+namespace DataTypes;
+
+public class Practice
 {
   // Praktik 2.1 - Variabel bilangan bulat dan teks
-  public static void Practice1()
+  public static void _1()
   {
     int umur = 16;
     string nama = "Budi";
@@ -11,7 +13,7 @@ public class DataTypes
   }
 
   // Praktik 2.2 - Variabel desimal dan karakter
-  public static void Practice2()
+  public static void _2()
   {
     double tinggi = 170.5;
     char jenisKelamin = 'L';
@@ -21,7 +23,7 @@ public class DataTypes
   }
 
   // Praktik 2.3 - Variabel logika (boolean)
-  public static void Practice3()
+  public static void _3()
   {
     bool isPelajar = true;
     string sekolah = "SMK Negeri 1 Kandeman";
@@ -31,7 +33,7 @@ public class DataTypes
   }
 
   // Praktik 2.4 - Variabel dengan tipe data yang bervariasi
-  public static void Practice4()
+  public static void _4()
   {
     int age = 17;
     double nilai = 85.5;

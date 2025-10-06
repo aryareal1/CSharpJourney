@@ -1,7 +1,9 @@
-public class Operators
+namespace Operators;
+
+public class Practice
 {
-  // Praktik 3.1 - Operator matematika penjumlahan
-  public static void Practice1()
+   // Praktik 3.1 - Operator matematika penjumlahan
+  public static void _1()
   {
     Console.WriteLine("ׂ╰┈➤  Praktik3.1 - Penjumlahan");
 
@@ -19,7 +21,7 @@ public class Operators
   }
 
   // Praktik 3.2 - Operator matematika pengurangan
-  public static void Practice2()
+  public static void _2()
   {
     Console.WriteLine("ׂ╰┈➤  Praktik3.2 - Pengurangan");
 
@@ -37,7 +39,7 @@ public class Operators
   }
 
   // Praktik 3.3 - Operator matematika perkalian
-  public static void Practice3()
+  public static void _3()
   {
     Console.WriteLine("ׂ╰┈➤  Praktik3.3 - Perkalian");
 
@@ -55,7 +57,7 @@ public class Operators
   }
 
   // Praktik 3.4 - Operator matematika pembagian
-  public static void Practice4()
+  public static void _4()
   {
     Console.WriteLine("ׂ╰┈➤  Praktik3.4 - Pembagian");
 
@@ -73,7 +75,7 @@ public class Operators
   }
 
   // Praktik 3.5 - Operator matematika sisa bagi
-  public static void Practice5()
+  public static void _5()
   {
     Console.WriteLine("ׂ╰┈➤  Praktik3.5 - Modulo (Sisa Bagi)");
 
@@ -91,7 +93,7 @@ public class Operators
   }
 
   // Praktik 3.6 - Operator matematika increment (penambahan beruntun)
-  public static void Practice6()
+  public static void _6()
   {
     Console.WriteLine("ׂ╰┈➤  Praktik3.6 - Increments");
 
@@ -106,7 +108,7 @@ public class Operators
   }
 
   // Praktik 3.7 - Operator matimatika decrement (pengurangan beruntun)
-  public static void Practice7()
+  public static void _7()
   {
     Console.WriteLine("ׂ╰┈➤  Praktik3.7 - Decrements");
 
@@ -121,7 +123,7 @@ public class Operators
   }
 
   // Praktik 3.8 - Operator perbandingan
-  public static void Practice8()
+  public static void _8()
   {
     Console.WriteLine("ׂ╰┈➤  Praktik3.8 - Comparison Operator");
 
@@ -144,7 +146,7 @@ public class Operators
   }
 
   // Praktik 3.9 - Operator logika
-  public static void Practice9()
+  public static void _9()
   {
     Console.WriteLine("ׂ╰┈➤  Praktik3.9 - Logical Operators");
 
@@ -164,7 +166,7 @@ public class Operators
   }
 
   // Praktik 3.10 - Operator assigment (penugasan)
-  public static void Practice10()
+  public static void _10()
   {
     Console.WriteLine("ׂ╰┈➤  Praktik3.10 - Assigment Operators");
 
@@ -184,102 +186,5 @@ public class Operators
     Console.WriteLine($"After x /= 4, it assigned to {x}");
     x %= 3;
     Console.WriteLine($"After x %= 3, it assigned to {x}");
-  }
-
-  // Tugas 3.1 - Buat program C# operator matematika : penjumlahan, pengurangan, perkalian, pembagian tiga buah bilangan
-  public static void Assigment1()
-  {
-    Console.WriteLine("╰┈➤  Tugas 3.1 - Operator +-*/ dengan 3 bilangan");
-
-    int InputInt()
-    {
-      int cursorLeft = Console.CursorLeft;
-      try
-      {
-        return int.Parse(Console.ReadLine() ?? string.Empty);
-      }
-      catch
-      {
-        Console.CursorTop--;
-        Console.CursorLeft = cursorLeft;
-        return InputInt();
-      }
-    }
-    char InputOperator()
-    {
-      int cursorLeft = Console.CursorLeft;
-      try
-      {
-        char[] operators = { '+', '-', '*', '/' };
-        char input = char.Parse(Console.ReadLine() ?? string.Empty);
-        if (!operators.Contains(input)) throw new Exception("Wrong operator");
-        return input;
-      }
-      catch
-      {
-        Console.CursorTop--;
-        Console.CursorLeft = cursorLeft;
-        return InputOperator();
-      }
-    }
-
-
-    Console.Write("Enter the first number (int): ");
-    int a = InputInt();
-    Console.Write("Enter the first operator (+-*/): ");
-    char oA = InputOperator();
-    Console.Write("Enter the second number (int): ");
-    int b = InputInt();
-    Console.Write("Enter the second operator (+-*/): ");
-    char oB = InputOperator();
-    Console.Write("Enter the third number (int): ");
-    int c = InputInt();
-
-    int rA = oA == '+' ? a + b : oA == '-' ? a - b : oA == '*' ? a * b : oA == '/' ? a / b : 0;
-    int r = oB == '+' ? rA + c : oB == '-' ? rA - c : oB == '*' ? rA * c : oB == '/' ? rA / c : 0;
-    Console.WriteLine($"The result of {a}{oA}{b}{oB}{c} is {r}");
-  }
-
-  // Tugas 3.2 - Buat program untuk memasukkan nilai siswa.
-  public static void Assigment2()
-  {
-    Console.WriteLine("╰┈➤  Tugas 3.2 - Nilai Siswa");
-
-    double InputScore()
-    {
-      double result;
-      while (!double.TryParse(Console.ReadLine(), out result)) ;
-      return result;
-    }
-
-    Console.Write("What's your name? ");
-    string name = Console.ReadLine() ?? string.Empty;
-    Console.Write("What grade are you now? ");
-    string grade = Console.ReadLine() ?? string.Empty;
-
-    Console.WriteLine("Input your test score below!");
-    Console.Write("Math → ");
-    double math = InputScore();
-    Console.Write("Indonesian → ");
-    double indo = InputScore();
-    Console.Write("English → ");
-    double eng = InputScore();
-
-    double total = math + indo + eng;
-    double average = total / 3;
-
-    Console.WriteLine(
-      $"""
-      
-      Here's the result:
-      Student Name     : {name}
-      Grade            : {grade}
-      ---
-      Math Score       : {math}
-      Indonesian Score : {indo}
-      English Score    : {eng}
-      Average Score    : {average}
-      Total Score      : {total} / 300 ({total / 300 * 100}%)
-      """);
   }
 }
