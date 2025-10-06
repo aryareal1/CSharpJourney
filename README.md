@@ -3,6 +3,9 @@
   <p>My journey to learn C# fundamentals in school</p>
 </div>
 
+## Requirements
+- .NET SDK
+
 ## How to Execute
 1. Copy the repository
    ```sh
