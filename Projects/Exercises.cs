@@ -1,6 +1,6 @@
 public class Exercises
 {
-  // Latihan 1 (4.1) - Buatlah program untuk mengubah / konversi suhu dari Celcius ke fahrenheit dan reamur.
+  // Latihan 1 (3.1) - Buatlah program untuk mengubah / konversi suhu dari Celcius ke fahrenheit dan reamur.
   public static void _1()
   {
     Console.WriteLine("╰┈➤  Latihan 1 - Konversi Suhu");
@@ -23,7 +23,7 @@ public class Exercises
     );
   }
 
-  // Latihan 2 (4.2) - Buatlah program untuk mengkonversi nilai tukar Rupiah ke mata uang lain
+  // Latihan 2 (3.2) - Buatlah program untuk mengkonversi nilai tukar Rupiah ke mata uang lain
   public static void _2()
   {
     Console.WriteLine("╰┈➤  Latihan 2 - Konversi Mata Uang");
