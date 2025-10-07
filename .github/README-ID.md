@@ -30,13 +30,13 @@ Pastikan kamu sudah menginstall:
 - Git (Optional)
 
 ## Cara Menjalankan
-1. Salin repository-nya
+1. Salin repository-nya  
    ```sh
    git clone https://github.com/aryareal1/CSharpJourney
    ```
-2. Jalankan perintah
+2. Jalankan perintah  
    ```sh
    dotnet run 
    ```
-3. Pilih proyek yang mau dijalankan
+3. Pilih proyek yang mau dijalankan  
    ![](./choosing_project.gif)

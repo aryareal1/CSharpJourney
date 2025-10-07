@@ -33,13 +33,13 @@ Make sure you installed:
 - Git (Optional)
 
 ## How to Execute
-1. Copy the repository
+1. Copy the repository  
    ```sh
    git clone https://github.com/aryareal1/CSharpJourney
    ```
-2. Run the command
+2. Run the command  
    ```sh
    dotnet run 
    ```
-3. Choose which project to run
+3. Choose which project to run  
    ![](.github/choosing_project.gif)
