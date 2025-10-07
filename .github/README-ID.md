@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=C%23%20Journey&fontAlignY=40">
-  <a href="/">EN</a> | ID
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=C%23%20Journey&fontAlignY=40"> <br>
+  <a href="/">EN</a> | ID <br>
   <p>My journey to learn C# fundamentals in school</p>
 </div>
 

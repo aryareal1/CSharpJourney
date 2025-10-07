@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=C%23%20Journey&fontAlignY=40">
-  EN | <a href=".github/README-ID.md">ID</a>
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=C%23%20Journey&fontAlignY=40"> <br>
+  EN | <a href=".github/README-ID.md">ID</a> <br>
   <p>My journey to learn C# fundamentals in school</p>
 </div>
 
